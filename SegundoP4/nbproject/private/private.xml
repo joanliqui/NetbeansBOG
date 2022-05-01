@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Joan/0_UOC/POO_BBDD/SegundoP4/src/bog_dao/HibernateDAO/HibernateDaoManager.java</file>
+            <file>file:/D:/Joan/0_UOC/POO_BBDD/SegundoP4/src/bog_views/GestionOS.java</file>
+            <file>file:/D:/Joan/0_UOC/POO_BBDD/SegundoP4/src/bog_models/Data.java</file>
+            <file>file:/D:/Joan/0_UOC/POO_BBDD/SegundoP4/src/bog_models/Customer.java</file>
+            <file>file:/D:/Joan/0_UOC/POO_BBDD/SegundoP4/src/bog_models/Order.java</file>
+            <file>file:/D:/Joan/0_UOC/POO_BBDD/SegundoP4/src/bog_controllers/CustomersController.java</file>
+            <file>file:/D:/Joan/0_UOC/POO_BBDD/SegundoP4/src/bog_dao/HibernateDAO/HibernateCustomerDao.java</file>
+            <file>file:/D:/Joan/0_UOC/POO_BBDD/SegundoP4/src/bog_controllers/OnlineStore.java</file>
+            <file>file:/D:/Joan/0_UOC/POO_BBDD/SegundoP4/src/hibernate.cfg.xml</file>
+            <file>file:/D:/Joan/0_UOC/POO_BBDD/SegundoP4/src/bog_dao/HibernateDAO/HibernateOrderDao.java</file>
+        </group>
+    </open-files>
+</project-private>
