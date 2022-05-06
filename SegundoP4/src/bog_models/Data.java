@@ -17,13 +17,16 @@ public class Data {
     
    
     public Data() throws DAOException {
-        this.daoManager = new HibernateDaoManager(); 
-        this.customers = readDBCustomers();
-        this.products = readDBProducts();
-        this.orders = readDBOrders();
+        this.daoManager = new HibernateDaoManager();
+        try{
+            this.customers = readDBCustomers();
+            this.products = readDBProducts();
+            //this.orders = readDBOrders(); //Las Annotations de Order no son correctas
+        }catch(DAOException e){
+            System.err.println("Error from DATA object:" + e);
+        }
     }
    
-    
     
     // Customer data functions ******************************************************************
     public ArrayList<Customer> getCustomers() {

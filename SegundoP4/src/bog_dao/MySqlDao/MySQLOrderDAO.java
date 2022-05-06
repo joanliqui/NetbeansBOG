@@ -16,7 +16,6 @@
 
 package bog_dao.MySqlDAO;
 
-import bog_models.Customer;
 import java.util.ArrayList;
 
 import bog_controllers.CustomersController;
@@ -24,7 +23,6 @@ import bog_controllers.ProductsController;
 import bog_dao.DAOException;
 import bog_dao.OrderDAO;
 import bog_models.Order;
-import bog_models.Product;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;

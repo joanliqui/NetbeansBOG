@@ -22,7 +22,7 @@ public class Product implements Serializable{
     private double price;
     @Column(name = "shippingFee")
     private double shippingFee;
-    @Column(name = "handlingTime")
+    @Column(name = "hadlingTime")
     private int handlingTime;
 
     // CONSTRUCTOR

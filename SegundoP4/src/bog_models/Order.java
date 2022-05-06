@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 //import static org.junit.Assert.assertEquals;
 //import static org.junit.Assert.assertTrue;
@@ -30,14 +32,14 @@ public class Order implements Serializable{
     private int orderID;
     
     @OneToOne
-    @PrimaryKeyJoinColumn
+    //@PrimaryKeyJoinColumn
     private Product product;
     
     @OneToOne
-    @PrimaryKeyJoinColumn
+    //@PrimaryKeyJoinColumn
     private Customer customer;
     
-    @Column(name = "quantity")
+    @Column(name = "productoQuantity")
     private int productQuantity;
     
     @Column(name = "subtotal")
@@ -46,9 +48,10 @@ public class Order implements Serializable{
     @Column(name = "creationDateTime")
     private LocalDateTime creationDataTime;
     
-    @Column(name = "handlingTime")
+    @Column(name = "hadnlingTime")
     private int handlingTime;
-
+    
+   
     private boolean isSent;
 
     // CONSTRUCTOR

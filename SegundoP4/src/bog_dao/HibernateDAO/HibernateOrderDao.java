@@ -19,54 +19,70 @@ import org.hibernate.SessionFactory;
  */
 public class HibernateOrderDao implements OrderDAO{
     
-    private SessionFactory sessionFactory = null;
-
     @Override
     public void create(Order insertado) throws DAOException {
-        Session session = null;
-        try {
-            //create SessionFactory
-             sessionFactory = HibernateUtil.getSessionFactory();
-             session = sessionFactory.getCurrentSession();
-             //Inicialize Transaccion
-             session.beginTransaction();
+         try {
+            HibernateUtil.buildSessionFactory();
+            Session session = HibernateUtil.getCurrentSession();
+            session.beginTransaction();
              //Save Object
              session.save(insertado);
              //Commit the transaction to database
              session.getTransaction().commit();
         } catch (Exception e) {
-            System.err.println("SessionFactory Failed." + e.getMessage());
+            System.err.println("Error from HibernateOrderDAO.SessionFactory Failed." + e.getMessage());
         }
         finally{
-            //Cerramos la session
-            if(session != null)
-                session.close();
+            
+            HibernateUtil.closeSessionFactory();
         }
     }
 
     @Override
     public Order readOne(String id) throws DAOException {
-        Session session = null;
-        session = sessionFactory.getCurrentSession();
-        Order o = (Order)session.get(Order.class, id);
-        return o;
+        Order c = null;
+        try {
+            HibernateUtil.buildSessionFactory();
+            Session session = HibernateUtil.getCurrentSession();
+            c = (Order)session.get(Order.class, id);
+            
+        } catch (Exception e) {
+            System.err.println("Error from HibernateOrderDAO.SessionFactory Failed." + e.getMessage());
+        }
+        finally{
+            HibernateUtil.closeSessionFactory();
+        }
+        return c;
     }
 
     @Override
     public ArrayList<Order> readAll() throws DAOException {
-        Session session = null;
-        session = sessionFactory.getCurrentSession();
-        String hib = "FROM Customers";
-        Query query = session.createQuery(hib);
-        ArrayList<Order> orders = (ArrayList<Order>)query.list();
+        ArrayList<Order> orders = null;
+        try{
+            HibernateUtil.buildSessionFactory();
+            Session session = HibernateUtil.getCurrentSession();
+            session.beginTransaction();
+            String hib = "FROM Order";
+            Query query = session.createQuery(hib);
+            orders = (ArrayList<Order>)query.list();
+           // session.getTransaction().commit();
+           // session.getTransaction();
+            
+        }catch(Exception e){
+            System.err.println("Error from HibernateOrderDAO.SessionFactory Failed." + e);
+        }
+        finally{
+            HibernateUtil.closeSessionFactory();
+        }
+       
         return  orders;
     }
 
     @Override
     public void update(Order modificado) throws DAOException {
-        Session session = null;
         try{
-            session = sessionFactory.getCurrentSession();
+            HibernateUtil.buildSessionFactory();
+            Session session = HibernateUtil.getCurrentSession();
             session.beginTransaction();
             session.update(modificado);
             session.getTransaction().commit();
@@ -74,24 +90,22 @@ public class HibernateOrderDao implements OrderDAO{
             System.err.println("SessionFactory Failed." + e.getMessage());
         }
         finally{
-            if(session != null)
-                session.close();
+           HibernateUtil.closeSessionFactory();
         }
     }
 
     @Override
     public void delete(Order eliminado) throws DAOException {
-        Session session = null;
         try{
-            session = sessionFactory.getCurrentSession();
+            HibernateUtil.buildSessionFactory();
+            Session session = HibernateUtil.getCurrentSession();
             session.delete(eliminado);
             session.getTransaction().commit();
         }catch(Exception e){
             System.err.println("SessionFactory Failed." + e.getMessage());
         }
         finally{
-            if(session != null)
-                session.close();
+            HibernateUtil.closeSessionFactory();
         }
     }
     

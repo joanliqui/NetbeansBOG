@@ -23,7 +23,7 @@ public class Customer implements  Serializable{
     @Column(name = "email")
     protected String email;
     
-    @Column(name = "adress")
+    @Column(name = "address")
     protected String address;
     
     @Column(name = "idCardNumber")

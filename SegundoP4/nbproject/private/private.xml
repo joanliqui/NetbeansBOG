@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/D:/Joan/0_UOC/POO_BBDD/NetbeansBOG/SegundoP4/src/bog_controllers/OnlineStore.java</file>
+            <file>file:/D:/Joan/0_UOC/POO_BBDD/NetbeansBOG/SegundoP4/src/bog_controllers/OrdersController.java</file>
+            <file>file:/D:/Joan/0_UOC/POO_BBDD/NetbeansBOG/SegundoP4/src/bog_views/GestionOS.java</file>
+            <file>file:/D:/Joan/0_UOC/POO_BBDD/NetbeansBOG/SegundoP4/src/hibernate.cfg.xml</file>
+            <file>file:/D:/Joan/0_UOC/POO_BBDD/NetbeansBOG/SegundoP4/src/bog_dao/HibernateDAO/HibernateDaoManager.java</file>
+            <file>file:/D:/Joan/0_UOC/POO_BBDD/NetbeansBOG/SegundoP4/src/bog_models/Data.java</file>
+            <file>file:/D:/Joan/0_UOC/POO_BBDD/NetbeansBOG/SegundoP4/src/bog_dao/HibernateDAO/HibernateCustomerDao.java</file>
+            <file>file:/D:/Joan/0_UOC/POO_BBDD/NetbeansBOG/SegundoP4/src/bog_dao/HibernateDAO/HibernateUtil.java</file>
+        </group>
     </open-files>
 </project-private>
